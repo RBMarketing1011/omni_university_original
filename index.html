@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Box Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <title>Omni University | Omni Coffee & Eggs</title>
+  </head>
+  <body>
+    <main class="main" id="main">
+      <div class="ou">
+        <!-- Navigation -->
+        <nav class="nav">
+          <span class="menu">
+            <img
+              class="logo"
+              src="/assets/CrestWithC&EFacebook.png"
+              alt="Omni Coffee & Eggs | Logo" />
+            <i class="bx bx-menu"></i
+          ></span>
+          <nav class="navbar">
+            <a href="#">Safety <i class="bx bxs-checkbox"></i></a
+            ><a href="#">Operations <i class="bx bxs-checkbox"></i></a
+            ><a href="#">Barista <i class="bx bxs-checkbox"></i></a
+            ><a href="#">Line Cook <i class="bx bxs-checkbox"></i></a
+            ><a href="#">Food Runner <i class="bx bxs-checkbox"></i></a
+            ><a href="#">Toast POS <i class="bx bxs-checkbox"></i></a
+            ><a href="#">Management <i class="bx bxs-checkbox"></i></a>
+            <button class="btn instructBtn">View Instructions</button>
+          </nav>
+        </nav>
+
+        <!-- Instructions -->
+        <div class="instructions">
+          <h1 class="heading">
+            Welcome to Omni University, where learning is just a click away!
+          </h1>
+          <img
+            src="/assets/Omni U Header.png"
+            alt="Omni Coffee & Eggs | Logo"
+            class="logo"
+          />
+          <p class="text">
+            Our platform is designed to provide you with the training and skills
+            you need to excel in your role at our company. Whether you're a
+            barista, line cook, food runner, or any other job title, you'll find
+            the resources you need to succeed.
+          </p>
+          <p class="text">
+            To use the platform, simply use the primary navigation bar at the
+            top of the page ( ☰ ). to select the position you are training for.
+            Then, use the secondary navigation bar to select the specific task
+            or set of related tasks you need to complete. You'll then be able to
+            watch a video and take a quiz to test your understanding of the
+            material.
+          </p>
+          <p class="text">
+            By successfully completing all of the quizzes, you'll have completed
+            the training program and be on your way to becoming an expert in
+            your role. So let's get started!
+          </p>
+        </div>
+
+        <!-- Main Video Content -->
+        <div class="main-content">
+          <nav class="main-content-nav"></nav>
+          <div class="content-box">
+            <h1 class="heading"><strong></strong> Training</h1>
+            <h2 class="subheading"></h2>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/4Tzd5k1jRLw?modestbranding=1&rel=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              class="video"
+            ></iframe>
+            <p class="text">
+              When You're Done Watching The Video Above, Take The Quiz.
+            </p>
+            <button class="btn quizBtn">
+              Take
+              <span class="quizBtnContent"></span>
+              Quiz
+            </button>
+            <div class="backdrop"></div>
+            <dialog class="quiz">
+              <div class="closeBtn"><i class="bx bx-x"></i></div>
+              <h1 class="heading"><strong></strong> Quiz</h1>
+              <form id="quizForm">
+                <div class="input-group names">
+                  <label for="firstName" id="firstNameLabel">
+                    First Name
+                  </label>
+                  <i class="invalid bx bxs-error-alt"></i>
+                  <i class="valid bx bxs-check-circle"></i>
+                  <input type="text" id="firstName" />
+                </div>
+                <div class="input-group names">
+                  <label for="lastName" id="lastNameLabel"> Last Name </label>
+                  <i class="invalid bx bxs-error-alt"></i>
+                  <i class="valid bx bxs-check-circle"></i>
+                  <input type="text" id="lastName" />
+                </div>
+                <div class="input-group names">
+                  <label for="email" id="emailLabel"> Email </label>
+                  <i class="invalid bx bxs-error-alt"></i>
+                  <i class="valid bx bxs-check-circle"></i>
+                  <input type="email" id="email" />
+                </div>
+                <div class="input-group select">
+                  <label for="question1" id="q1Label"> </label>
+                  <i class="invalid bx bxs-error-alt"></i>
+                  <i class="valid bx bxs-check-circle"></i>
+                  <select id="question1" name="question1">
+                    <option value="" selected disabled>
+                      --Choose Your Answer--
+                    </option>
+                    <option class="a1" value="1"></option>
+                    <option class="a2" value="2"></option>
+                    <option class="a3" value="3"></option>
+                    <option class="a4" value="4"></option>
+                  </select>
+                </div>
+                <div class="input-group select">
+                  <label for="question2" id="q2Label"> </label>
+                  <i class="invalid bx bxs-error-alt"></i>
+                  <i class="valid bx bxs-check-circle"></i>
+                  <select id="question2" name="question2">
+                    <option value="" selected disabled>
+                      --Choose Your Answer--
+                    </option>
+                    <option class="a1" value="1"></option>
+                    <option class="a2" value="2"></option>
+                    <option class="a3" value="3"></option>
+                    <option class="a4" value="4"></option>
+                  </select>
+                </div>
+                <div class="input-group select">
+                  <label for="question3" id="q3Label"> </label>
+                  <i class="invalid bx bxs-error-alt"></i>
+                  <i class="valid bx bxs-check-circle"></i>
+                  <select id="question3" name="question3">
+                    <option value="" selected disabled>
+                      --Choose Your Answer--
+                    </option>
+                    <option class="a1" value="1"></option>
+                    <option class="a2" value="2"></option>
+                    <option class="a3" value="3"></option>
+                    <option class="a4" value="4"></option>
+                  </select>
+                </div>
+                <button class="btn" type="submit">Submit</button>
+              </form>
+            </dialog>
+            <dialog class="passFail">
+              <div class="passFail-container">
+                <img src="" alt="Pass / Fail Image" class="passFail-img" />
+                <h2 class="passFail-heading"></h2>
+                <p class="passFail-text"></p>
+              </div>
+            </dialog>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Email Send Script -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- Main Script -->
+    <script src="/main.js"></script>
+  </body>
+</html>

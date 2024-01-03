@@ -1,0 +1,427 @@
+/* =========================MAIN RESET AND COLORS============================= */
+
+:root {
+	--main-bg: #fbfaf8;
+	--second-bg: #f0f0f0;
+	--nav-bg: #c0c0c0;
+	--heading-color: #b19d56;
+	--text-color: #000000;
+	--main-red: #d52a0b;
+	--second-red: #880808;
+	--success: #5cb85c;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	scroll-margin-top: 100px;
+	text-decoration: none;
+	color: var(--text-color);
+	font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+	background: var(--main-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+	color: var(--heading-color);
+	font-family: 'Oleo Script', 'serif';
+}
+
+button {
+	border: none;
+}
+
+p span {
+	color: var(--text-color) !important;
+	font-family: 'Poppins', 'sans-serif' !important;
+}
+
+/* ==========================================Universal CSS================================== */
+
+.btn {
+	padding: 1rem 3rem;
+	background: var(--main-red);
+	border-radius: .6rem;
+	box-shadow: 0 0 10px black;
+	font-weight: 600;
+	text-transform: uppercase;
+	transition: .3s ease;
+}
+
+.btn:hover {
+	background: var(--second-red);
+	color: var(--main-bg);
+}
+
+.btn:hover span {
+	color: var(--main-bg);
+	transition: .3s ease;
+}
+
+.heading {
+	font-size: 2rem;
+	text-align: center;
+	margin: .8rem auto;
+	padding: 0 1rem;
+}
+
+.subheading {
+	font-size: 1.5rem;
+	text-align: center;
+	font-weight: 200;
+	margin: .5rem auto;
+}
+
+.text {
+	font-size: .9rem;
+	text-align: center;
+	margin: .5rem;
+	padding: 0 1rem;
+}
+
+
+/* ==========================================Main CSS========================================= */
+
+/* OU dialog styling */
+.ou {
+	width: 100%;
+	height: 100vh;
+	background: var(--main-bg);
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+	border: none;
+}
+
+/* OU navbar and menu icon style */
+.ou .nav {
+	position: sticky;
+	top: 0;
+	left: 0;
+	background: var(--main-red);
+}
+
+.menu {
+	width: 100vw;
+	height: 75px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu i {
+	font-size: 2.5rem;
+	margin-right: 1rem;
+}
+
+.menu .logo {
+	width: 6.5rem;
+	margin-left: 1rem;
+}
+
+.navbar {
+	width: 100vw;
+	height: 100vh;
+	background: var(--main-red);
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	padding: 2rem;
+	position: fixed;
+	top: 74px;
+	left: 100%;
+	transition: .5s ease;
+}
+
+.navbar.active {
+	left: 0;
+}
+
+.navbar a {
+	font-size: 2rem;
+	font-weight: 600;
+	margin: 1rem 0;
+	position: relative;
+}
+
+.navbar a::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	height: 4px;
+	background: black;
+	transition: .3s ease;
+}
+
+.navbar a:hover::before,
+.navbar a.active::before {
+	width: 100%;
+}
+
+.navbar a .bxs-check-square {
+	color: var(--success);
+}
+
+.navbar .instructBtn {
+	background: var(--main-bg);
+	margin-top: 100px;
+}
+
+.navbar .instructBtn:hover {
+	color: var(--text-color);
+}
+
+/* Instructions styling */
+.instructions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 2rem 0;
+}
+
+.instructions img {
+	width: 90vw;
+	margin: 1rem 0;
+}
+
+/* main content styling */
+.main-content {
+	display: none;
+}
+
+.content-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.content-box .video {
+	width: 95vw;
+	height: 35vh;
+	margin: 2rem 0;
+}
+
+.content-box .btn {
+	width: 80vw;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+/* ===============Main Content Nav======================================= */
+.main-content-nav {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 1rem;
+}
+
+.main-content-nav a {
+	padding: .1rem .5rem;
+	font-size: .8rem;
+	border-left: 1px solid lightgrey;
+	border-right: 1px solid lightgrey;
+	border-top: 1px solid lightgrey;
+	border-top-right-radius: .6rem;
+	border-top-left-radius: .6rem;
+	background: var(--second-bg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-content-nav a:hover,
+.main-content-nav a.active {
+	background: var(--nav-bg);
+	border-color: black;
+	color: black;
+	cursor: pointer;
+}
+
+.main-content-nav a .bxs-checkbox {
+	color: var(--main-red);
+	font-size: 1rem;
+}
+
+.main-content-nav a .bxs-check-square {
+	color: var(--success);
+	font-size: 1rem;
+}
+
+/* Quiz Dialog Style */
+.quiz {
+	width: 90vw;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding-bottom: 3rem;
+}
+
+.backdrop {
+	display: none;
+	background: rgba(0,0,0,.8);
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.closeBtn {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.closeBtn i {
+	font-size: 2rem;
+}
+
+.quiz form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.quiz form .input-group {
+	width: 80vw;
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	margin: .5rem 0;
+}
+
+.quiz form .select label {
+	width: 80vw;
+	margin-bottom: .5rem;
+}
+
+.quiz form input {
+	width: 80vw;
+	border-radius: .2rem;
+}
+
+.quiz form input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.quiz form select {
+	width: 100%;
+	border-radius: .2rem;
+}
+
+.quiz form input:focus,
+.quiz form select:focus {
+	border-color: var(--heading-color);
+	box-shadow: 0 0 10px var(--heading-color);
+}
+
+.quiz form .btn {
+	width: 50vw;
+}
+
+.invalid {
+	display: none;
+	color: var(--main-red);
+	position: absolute;
+	right: 5%;
+	bottom: .2rem;
+}
+
+.valid {
+	display: none;
+	color: var(--success);
+	position: absolute;
+	right: 5%;
+	bottom: .2rem;
+}
+
+/* Pass / Fail dialog style */
+.passFail {
+	width: 90vw;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: .6rem;
+	overflow: hidden;
+}
+
+.passFail-img {
+	width: 100%;
+	height: auto;
+	margin: 0;
+}
+
+.passFail-heading {
+	text-align: center;
+	margin: 1.2rem 0;
+}
+
+.passFail-text {
+	text-align: center;
+	margin: 1.2rem 0;
+}
+
+@media (min-width: 700px) and (max-width: 1100px) {
+  .content-box .video {
+		width: 60vw;
+  }
+
+	.content-box .btn {
+		width: 60vw;
+	}
+
+	.content-box .quiz {
+		width: 70vw;
+	}
+
+	.quiz form .input-group,
+	.quiz form .input-group input,
+	.quiz form .input-group label {
+		width: 50vw;
+	}
+}
+
+@media (min-width: 1101px) and (max-width: 3500px) {
+	.content-box .video {
+		width: 40vw;
+	}
+
+	.content-box .btn {
+		width: 40vw;
+	}
+
+	.content-box .quiz {
+		width: 40vw;
+	}
+
+	.quiz form .input-group,
+	.quiz form .input-group input,
+	.quiz form .input-group label,
+	.quiz form .btn {
+		width: 30vw;
+	}
+}
